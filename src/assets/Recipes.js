@@ -163,7 +163,7 @@ const recipes = [
       "325IU vitamin A",
       "1.7mg vitamin C",
       "11mg calcium",
-      "0.6mg iron"
+      "0.6mg iron",
     ],
     equipment: [
       "oven",
@@ -172,6 +172,84 @@ const recipes = [
       "baking/parchment paper",
       "meat thermometer",
       "baking tray",
+    ],
+  },
+  {
+    name: "Creamy Homemade Baked Mac and Cheese",
+    hours: 0.75,
+    imageURL:
+      "https://www.allrecipes.com/thmb/55m3_k4qDl5NZsToQ6eNyOcQBT0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/11679-homemade-mac-and-cheese-chef-mo-3x2-1-f0f5582e8dd549d18e56b95cece93045.jpg",
+    complexity: 3,
+    servings: 4,
+    source: "https://www.allrecipes.com/recipe/11679/homemade-mac-and-cheese/",
+    ingredients: [
+      "8 ounces uncooked elbow macaroni",
+      "1/4 cup salted butter",
+      "3 tablespoons all-purpose flour",
+      "2 1/2 cups milk, or more as needed",
+      "2 cups sharp cheddar cheese, shredded",
+      "1/2 cup parmesan cheese, finely grated",
+      "salt and ground black pepper to taste (optional)",
+    ],
+    instructions: [
+      {
+        text: "Preheat oven to 350°F. Grease an 8-inch square baking dish.",
+        button: {
+          text: "Preheat oven",
+          value: 350,
+          location: "oven",
+        },
+      },
+      {
+        text: "Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes. Drain and transfer to the prepared baking dish.",
+        button: {
+          text: "Turn on back-right burner",
+          value: "medium",
+          location: "back-right",
+        },
+      },
+      {
+        text: "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
+        button: {
+          text: "Turn on front-left burner",
+          value: "low",
+          location: "front-left",
+        },
+      },
+      {
+        text: "Gradually whisk 2 1/2 cups milk into the flour mixture, and bring to a simmer. Stir in shredded cheddar and finely grated parmesan cheeses; season with salt and pepper. Cook and stir over low heat until cheese is melted and sauce has thickened, 3 to 5 minutes, adding up to 1/2 cup more milk if needed. Pour cheese sauce over macaroni and stir until well combined.",
+      },
+      {
+        text: "Melt 2 tablespoons butter in a small skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned. Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
+        button: {
+          text: "Turn on front-right burner",
+          value: "medium",
+          location: "front-right",
+        },
+      },
+      {
+        text: "Bake in the preheated oven until topping is golden brown and macaroni and cheese is bubbling, about 30 minutes.",
+      },
+    ],
+    nutritionFacts: [
+      "48g total fat",
+      "30g saturated fat",
+      "142mg cholesterol",
+      "881mg sodium",
+      "65g carbohydrate",
+      "3g fiber",
+      "37g protein",
+      "1mg vitamin C",
+      "865mg calcium",
+      "3mg iron",
+      "522mg potassium",
+    ],
+    equipment: [
+      "8-inch square baking dish",
+      "oven",
+      "large pot",
+      "medium skillet",
+      "small skillet",
     ],
   },
   {
