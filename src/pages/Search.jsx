@@ -1,8 +1,10 @@
-import { Card, Button, Form, Row, Col, Container } from "react-bootstrap";
+import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import fullRecipeList from "../assets/Recipes";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({ setSelectedRecipe }) => {
+  const navigate = useNavigate();
   const [recipesList, setRecipesList] = useState(fullRecipeList);
   const [query, setQuery] = useState(""); // String
   const [minServingsFilter, setMinServingsFilter] = useState(""); // Number
@@ -10,6 +12,11 @@ const Search = ({ setSelectedRecipe }) => {
   const [maxHoursFilter, setMaxHoursFilter] = useState(""); // Number
   const [equipmentFilter, setEquipmentFilter] = useState(""); // String
   const [ingredientFilter, setIngredientFilter] = useState(""); // String
+
+  // Scroll to the top of the page when it first renders
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // Begin with the full list of recipes
@@ -77,6 +84,12 @@ const Search = ({ setSelectedRecipe }) => {
     setMaxHoursFilter("");
     setEquipmentFilter("");
     setIngredientFilter("");
+  };
+
+  const redirectToDetails = (recipe) => {
+    setSelectedRecipe(recipe);
+
+    navigate("/details");
   };
 
   return (
@@ -160,7 +173,7 @@ const Search = ({ setSelectedRecipe }) => {
                 </Card.Body>
                 <Button
                   className="m-3"
-                  onClick={() => setSelectedRecipe(recipe)}
+                  onClick={() => redirectToDetails(recipe)}
                 >
                   View Details
                 </Button>

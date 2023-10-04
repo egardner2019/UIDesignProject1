@@ -1,7 +1,13 @@
 import { Image, Row, Col, Button } from "react-bootstrap";
 import Burner from "../components/Burner";
+import { useEffect } from "react";
 
 const RecipeDetails = ({ recipe }) => {
+  // Scroll to the top of the page when it first renders
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const {
     name,
     hours,
