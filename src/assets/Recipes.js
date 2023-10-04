@@ -29,7 +29,7 @@ const recipes = [
         text: "Preheat the oven to 350°F.",
         button: {
           text: "Preheat oven",
-          value: "350",
+          value: 350,
           location: "oven",
         },
       },
@@ -97,6 +97,106 @@ const recipes = [
       "oven",
       "aluminum foil",
     ],
+  },
+  {
+    name: "Oven Baked Chicken Breast",
+    hours: 0.5,
+    imageURL:
+      "https://www.recipetineats.com/wp-content/uploads/2018/03/Oven-Baked-Chicken-Breast_8-1.jpg",
+    complexity: 1,
+    servings: 4,
+    source: "https://www.recipetineats.com/oven-baked-chicken-breast/",
+    ingredients: [
+      "4 chicken breasts",
+      "2 teaspoons olive oil, divided",
+      "1 1/2 tablespoons brown sugar",
+      "1 teaspoon paprika",
+      "1 tsp dried oregano or thyme",
+      "1/4 teaspoon garlic powder",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon black pepper",
+      "finely chopped parsley (optional)",
+    ],
+    instructions: [
+      {
+        text: "Preheat oven to 425°F.",
+        button: {
+          text: "Preheat oven",
+          value: 425,
+          location: "oven",
+        },
+      },
+      {
+        text: "Pound chicken to 1.5cm at the thickest part using a rolling pin, meat mallet, or your fist.",
+      },
+      {
+        text: "Mix brown sugar, paprika, oregano/thyme, garlic powder, salt, and pepper together to create the seasoning.",
+      },
+      {
+        text: "Line tray with foil and baking/parchment paper. Place chicken upside down on tray. Drizzle chicken with half the oil. Rub over with fingers. Sprinkle with seasoning.",
+      },
+      {
+        text: "Flip chicken. Drizzle with the rest of the oil, rub with fingers, and sprinkle with seasoning, covering as much of the surface area as you can.",
+      },
+      {
+        text: "Bake 18 minutes, or until internal temperature is 165°F using a meat thermometer.",
+      },
+      {
+        text: "Remove from oven and immediately transfer chicken to serving plates.",
+      },
+      {
+        text: "Wait 3-5 minutes before serving. Top with parsley if desired.",
+      },
+    ],
+    nutritionFacts: [
+      "286 calories",
+      "4g carbohydrates",
+      "46g protein",
+      "7g fat",
+      "1g saturated fat",
+      "1g polyunsaturated fat",
+      "1g monounsaturated fat",
+      "127mg cholesterol",
+      "403mg sodium",
+      "397mg potassium",
+      "4g sugar",
+      "325IU vitamin A",
+      "1.7mg vitamin C",
+      "11mg calcium",
+      "0.6mg iron"
+    ],
+    equipment: [
+      "oven",
+      "meat mallet or rolling pin",
+      "aluminum foil",
+      "baking/parchment paper",
+      "meat thermometer",
+      "baking tray",
+    ],
+  },
+  {
+    name: "",
+    hours: 1,
+    imageURL: "",
+    complexity: 1,
+    servings: 1,
+    source: "",
+    ingredients: ["", ""],
+    instructions: [
+      {
+        text: "",
+        button: {
+          text: "",
+          value: "",
+          location: "",
+        },
+      },
+      {
+        text: "",
+      },
+    ],
+    nutritionFacts: ["", ""],
+    equipment: ["", ""],
   },
 ];
 

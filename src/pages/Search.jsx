@@ -1,4 +1,4 @@
-import { Card, Button, Form, Row, Col } from "react-bootstrap";
+import { Card, Button, Form, Row, Col, Container } from "react-bootstrap";
 import fullRecipeList from "../assets/Recipes";
 import { useEffect, useState } from "react";
 
@@ -141,11 +141,11 @@ const Search = ({ setSelectedRecipe }) => {
       <Button className="mb-3" onClick={() => resetFiltersAndQuery()}>
         Reset All
       </Button>
-      <Row xs={1} md={2} className="g-4">
+      <Row className="g-4">
         {recipesList.map((recipe, index) => {
           return (
-            <Col key={index}>
-              <Card style={{ width: "20%" }}>
+            <Col md="4" key={index}>
+              <Card style={{ margin: 20 }}>
                 <Card.Img
                   style={{ objectFit: "cover" }}
                   height={200}
