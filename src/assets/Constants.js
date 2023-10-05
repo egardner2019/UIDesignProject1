@@ -1,9 +1,9 @@
 const HeatColors = {
-    High: "red",
-    MediumHigh: "darkorange",
-    Medium: "orange",
-    MediumLow: "sandybrown",
-    Low: "yellow",
+    High: "#e37971",
+    MediumHigh: "#e39371",
+    Medium: "#e3aa71",
+    MediumLow: "#e3bd71",
+    Low: "#f2e38a",
     Off: "white"
 };
 

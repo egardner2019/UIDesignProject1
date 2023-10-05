@@ -11,26 +11,22 @@ const Burner = ({ temperature }) => {
   else if (temperature === Temperatures.Low) color = HeatColors.Low;
   else if (temperature === Temperatures.Off) color = HeatColors.Off;
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "auto",
-        height: "150px",
-        width: "150px",
-        borderRadius: "50%",
-        borderColor: "black",
-        borderWidth: "5px",
-        borderStyle: "solid",
-        textAlign: "center",
-        backgroundColor: color,
-      }}
-    >
-      {temperature}
-    </div>
-  );
+  const burnerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "auto",
+    height: "150px",
+    width: "150px",
+    borderRadius: "50%",
+    borderColor: "black",
+    borderWidth: "5px",
+    borderStyle: "solid",
+    textAlign: "center",
+    backgroundColor: color,
+  };
+
+  return <div style={burnerStyle}>{temperature}</div>;
 };
 
 export default Burner;

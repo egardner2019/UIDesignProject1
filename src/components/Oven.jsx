@@ -10,31 +10,31 @@ const Oven = ({ temperature }) => {
   else if (temperature <= 350) color = HeatColors.MediumHigh;
   else color = HeatColors.High;
 
+  const ovenStyle = {
+    margin: "auto",
+    height: "300px",
+    width: "600px",
+    borderColor: "black",
+    borderWidth: "5px",
+    borderStyle: "solid",
+  };
+
+  const ovenWindowStyle = {
+    margin: "20px auto",
+    height: "200px",
+    width: "400px",
+    borderColor: "black",
+    borderWidth: "5px",
+    borderStyle: "solid",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: color,
+  };
+
   return (
-    <div
-      style={{
-        margin: "auto",
-        height: "300px",
-        width: "600px",
-        borderColor: "black",
-        borderWidth: "5px",
-        borderStyle: "solid",
-      }}
-    >
-      <div
-        style={{
-          margin: "20px auto",
-          height: "200px",
-          width: "400px",
-          borderColor: "black",
-          borderWidth: "5px",
-          borderStyle: "solid",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: color,
-        }}
-      >
+    <div style={ovenStyle}>
+      <div style={ovenWindowStyle}>
         {temperature === Temperatures.Off ? temperature : temperature + "°F"}
       </div>
     </div>
