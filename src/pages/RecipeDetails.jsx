@@ -1,11 +1,30 @@
-import { Image, Row, Col, Button } from "react-bootstrap";
+import { Image, Row, Col, Button, Container } from "react-bootstrap";
 import Burner from "../components/Burner";
-import { useEffect } from "react";
+import Oven from "../components/Oven";
+import { useEffect, useState } from "react";
 
 const RecipeDetails = ({ recipe }) => {
-  // Scroll to the top of the page when it first renders
+  const ovenAndStoveOff = {
+    oven: "Off",
+    frontLeftBurner: "Off",
+    frontRightBurner: "Off",
+    backLeftBurner: "Off",
+    backRightBurner: "Off",
+  };
+  const [temperatures, setTemperatures] = useState(ovenAndStoveOff);
+
+  // Update the temperature of the appropriate burner/oven in the figure
+  const updateTemp = ({ location, value }) => {
+    let currentTemps = { ...temperatures };
+    currentTemps[location] = value;
+    setTemperatures(currentTemps);
+  };
+
   useEffect(() => {
+    // Scroll to the top of the page when it first renders
     window.scrollTo(0, 0);
+    // Reset the oven and burners when the page first renders
+    setTemperatures(ovenAndStoveOff);
   }, []);
 
   const {
@@ -80,12 +99,33 @@ const RecipeDetails = ({ recipe }) => {
                 <div key={index}>
                   <li>{instruction.text}</li>
                   {instruction.button && (
-                    <Button>{instruction.button.text}</Button>
+                    <Button
+                      onClick={() =>
+                        updateTemp({
+                          location: instruction.button.location,
+                          value: instruction.button.value,
+                        })
+                      }
+                    >
+                      {instruction.button.text}
+                    </Button>
                   )}
                 </div>
               );
             })}
           </ol>
+          <Container
+            style={{
+              marginTop: 50,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button onClick={() => setTemperatures(ovenAndStoveOff)}>
+              Turn off oven and burners
+            </Button>
+          </Container>
         </Col>
         <div
           style={{
@@ -97,48 +137,23 @@ const RecipeDetails = ({ recipe }) => {
           <Col>
             <Row>
               <Col style={{ margin: "20px" }}>
-                <Burner temperature={"medium"} />
+                <Burner temperature={temperatures.backLeftBurner} />
               </Col>
               <Col style={{ margin: "20px" }}>
-                <Burner temperature={"high"} />
-              </Col>
-            </Row>
-            <Row>
-              <Col style={{ margin: "20px" }}>
-                <Burner temperature={"low"} />
-              </Col>
-              <Col style={{ margin: "20px" }}>
-                <Burner temperature={"medium-low"} />
+                <Burner temperature={temperatures.backRightBurner} />
               </Col>
             </Row>
             <Row>
               <Col style={{ margin: "20px" }}>
-                <div
-                  style={{
-                    margin: "auto",
-                    height: "300px",
-                    width: "600px",
-                    borderColor: "black",
-                    borderWidth: "5px",
-                    borderStyle: "solid",
-                  }}
-                >
-                  <div
-                    style={{
-                      margin: "20px auto",
-                      height: "200px",
-                      width: "400px",
-                      borderColor: "black",
-                      borderWidth: "5px",
-                      borderStyle: "solid",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    350°F
-                  </div>
-                </div>
+                <Burner temperature={temperatures.frontLeftBurner} />
+              </Col>
+              <Col style={{ margin: "20px" }}>
+                <Burner temperature={temperatures.frontRightBurner} />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={{ margin: "20px" }}>
+                <Oven temperature={temperatures.oven} />
               </Col>
             </Row>
           </Col>

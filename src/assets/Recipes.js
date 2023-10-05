@@ -1,3 +1,5 @@
+import { OvenBurnerLocations, Temperatures } from "./Constants";
+
 const recipes = [
   {
     name: "Easy Homemade Lasagna",
@@ -30,31 +32,31 @@ const recipes = [
         button: {
           text: "Preheat oven",
           value: 350,
-          location: "oven",
+          location: OvenBurnerLocations.Oven,
         },
       },
       {
         text: "In a large pot of salted water, boil lasagna noodles until al dente according to package directions. Drain, rinse under cold water, and set aside.",
         button: {
           text: "Turn on back-right burner",
-          value: "medium",
-          location: "back-right",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
         },
       },
       {
         text: "In a large skillet, brown beef, sausage, onion, and garlic over medium-high heat until no pink remains. Drain any fat.",
         button: {
           text: "Turn on front-left burner",
-          value: "medium-high",
-          location: "front-left",
+          value: Temperatures.MediumHigh,
+          location: OvenBurnerLocations.FrontLeftBurner,
         },
       },
       {
         text: "Stir in the pasta sauce, tomato paste, Italian seasoning, 1/2 teaspoon of salt, and 1/4 teaspoon of black pepper. Simmer uncovered over medium heat for 5 minutes or until thickened.",
         button: {
           text: "Turn down heat of front-left burner",
-          value: "medium",
-          location: "front-left",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
         },
       },
       {
@@ -123,7 +125,7 @@ const recipes = [
         button: {
           text: "Preheat oven",
           value: 425,
-          location: "oven",
+          location: OvenBurnerLocations.Oven,
         },
       },
       {
@@ -197,23 +199,23 @@ const recipes = [
         button: {
           text: "Preheat oven",
           value: 350,
-          location: "oven",
+          location: OvenBurnerLocations.Oven,
         },
       },
       {
         text: "Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes. Drain and transfer to the prepared baking dish.",
         button: {
           text: "Turn on back-right burner",
-          value: "medium",
-          location: "back-right",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
         },
       },
       {
         text: "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
         button: {
           text: "Turn on front-left burner",
-          value: "low",
-          location: "front-left",
+          value: Temperatures.Low,
+          location: OvenBurnerLocations.FrontLeftBurner,
         },
       },
       {
@@ -223,8 +225,8 @@ const recipes = [
         text: "Melt 2 tablespoons butter in a small skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned. Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
         button: {
           text: "Turn on front-right burner",
-          value: "medium",
-          location: "front-right",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontRightBurner,
         },
       },
       {
