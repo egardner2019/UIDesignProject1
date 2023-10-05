@@ -2,6 +2,7 @@ import { Image, Row, Col, Button, Container } from "react-bootstrap";
 import Burner from "../components/Burner";
 import Oven from "../components/Oven";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const RecipeDetails = ({ recipe }) => {
   const ovenAndStoveOff = {
@@ -43,9 +44,16 @@ const RecipeDetails = ({ recipe }) => {
   return (
     <>
       <Row>
+        <Link to="/">
+          <Image
+            style={{ position: "absolute", top: 30, left: 30 }}
+            height="30"
+            src="./magnifier.png"
+          />
+        </Link>
         <Col xl="auto">
           <Image
-            style={{ objectFit: "cover", marginBottom: "20px" }}
+            style={{ objectFit: "cover", marginBottom: 20 }}
             height={300}
             width={300}
             src={imageURL}
