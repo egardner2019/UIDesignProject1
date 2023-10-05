@@ -229,6 +229,12 @@ const Search = ({ setSelectedRecipe }) => {
         )}
       </Form>
 
+      {recipesList.length > 0 ? (
+        <h2>Displaying {recipesList.length} matching recipes...</h2>
+      ) : (
+        <h2 style={{marginTop: 20}}>No recipes match the entered search criteria.</h2>
+      )}
+
       <Row className="g-4">
         {recipesList.map((recipe, index) => {
           return (
@@ -247,12 +253,12 @@ const Search = ({ setSelectedRecipe }) => {
                   <Card.Text>Servings: {recipe.servings}</Card.Text>
                 </Card.Body>
                 <Button
-                  style={{margin: "0px 20px"}}
+                  style={{ margin: "0px 20px" }}
                   onClick={() => redirectToDetails(recipe)}
                 >
                   View Details
                 </Button>
-                <Button style={{margin: "10px 20px"}} href={recipe.source}>
+                <Button style={{ margin: "10px 20px" }} href={recipe.source}>
                   View Original Source
                 </Button>
               </Card>
