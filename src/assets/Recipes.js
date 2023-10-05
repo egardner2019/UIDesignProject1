@@ -177,7 +177,7 @@ const recipes = [
     ],
   },
   {
-    name: "Creamy Homemade Baked Mac and Cheese",
+    name: "Creamy Baked Mac and Cheese",
     hours: 0.75,
     imageURL:
       "https://www.allrecipes.com/thmb/55m3_k4qDl5NZsToQ6eNyOcQBT0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/11679-homemade-mac-and-cheese-chef-mo-3x2-1-f0f5582e8dd549d18e56b95cece93045.jpg",
@@ -255,7 +255,7 @@ const recipes = [
     ],
   },
   {
-    name: "Chicken Lo Mein (Crazy Easy)",
+    name: "Chicken Lo Mein",
     hours: 0.5,
     imageURL:
       "https://i1.wp.com/cdn.momsdish.com/wp-content/uploads/2022/04/Chicken-Lo-Mein-015-600x900.jpg",
@@ -367,7 +367,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "Steak Quesadilla",
     hours: 0.5,
@@ -404,7 +403,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "Carne Asada Street Tacos",
     hours: 1,
@@ -446,7 +444,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "Teriyaki Chicken Skewers",
     hours: 0.5,
@@ -477,7 +474,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "Chicken Stir Fry",
     hours: 0.5,
@@ -518,9 +514,8 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
-    name: "The Classic Pierogi (Potatoes and Cheese)",
+    name: "The Classic Pierogi",
     hours: 1.5,
     imageURL:
       "https://i1.wp.com/cdn.momsdish.com/wp-content/uploads/2021/05/Pierogi14-1200x1800.jpg",
@@ -531,10 +526,10 @@ const recipes = [
       "2 eggs",
       "2 tbsp sour cream",
       "1 cup milk",
-      "3 1/2 cup flour (may need more of less)",
+      "3 1/2 cup flour (may need more or less)",
       "2 tsp salt",
       "3 lb large potatoes",
-      "4 tbsp Unsalted Butter",
+      "4 tbsp unsalted Butter",
       "1/4 cup warm milk",
       "1/2 cup cheddar cheese",
       "1 large onion",
@@ -559,7 +554,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "Beet Quinoa Salad",
     hours: 0.75,
@@ -594,7 +588,6 @@ const recipes = [
     ],
     equipment: [],
   },
-
   {
     name: "",
     hours: 1,

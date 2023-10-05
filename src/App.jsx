@@ -9,8 +9,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
   - add nicer/modern styling throughout
     - decide on color palette
   - add more recipes to Recipes.js
-  - add back button to RecipeDetails page
-  - make filters on search page all in one row
   - make app accessible from the web (Netlify, GitHub, Vercel)
 **/
 
