@@ -6,9 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /**
   TODO
-  - add nicer/modern styling throughout
-    - decide on color palette
-  - add more recipes to Recipes.js
+  - if time: change heat colors?
+  - add remaining details to recipes to Recipes.js
   - make app accessible from the web (Netlify, GitHub, Vercel)
 **/
 

@@ -164,10 +164,10 @@ const Search = ({ setSelectedRecipe }) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger" onClick={resetFilters}>
+          <Button className="redButton" onClick={resetFilters}>
             Clear Filters
           </Button>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button className="greyButton" onClick={() => setShowModal(false)}>
             Close
           </Button>
         </Modal.Footer>
@@ -178,7 +178,7 @@ const Search = ({ setSelectedRecipe }) => {
         <InputGroup className="mb-3">
           <Button
             style={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
-            variant="secondary"
+            className="greyButton"
             onClick={() => setShowModal(true)}
           >
             Filters
@@ -192,7 +192,7 @@ const Search = ({ setSelectedRecipe }) => {
           />
           <Button
             style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
-            variant="danger"
+            className="redButton"
             onClick={() => setQuery("")}
           >
             Clear
@@ -203,27 +203,31 @@ const Search = ({ setSelectedRecipe }) => {
           maxHoursFilter ||
           equipmentFilter ||
           ingredientFilter) && (
-          <InputGroup>
+          <InputGroup style={{ marginBottom: 20 }}>
             {minServingsFilter && (
-              <InputGroup.Text>
+              <InputGroup.Text className="shownFilter">
                 Minimum Servings: {minServingsFilter}
               </InputGroup.Text>
             )}
             {maxComplexityFilter && (
-              <InputGroup.Text>
+              <InputGroup.Text className="shownFilter">
                 Maximum Complexity: {maxComplexityFilter}
               </InputGroup.Text>
             )}
             {maxHoursFilter && (
-              <InputGroup.Text>
+              <InputGroup.Text className="shownFilter">
                 Maximum Number of Hours: {maxHoursFilter}
               </InputGroup.Text>
             )}
             {equipmentFilter && (
-              <InputGroup.Text>Requires: {equipmentFilter}</InputGroup.Text>
+              <InputGroup.Text className="shownFilter">
+                Requires: {equipmentFilter}
+              </InputGroup.Text>
             )}
             {ingredientFilter && (
-              <InputGroup.Text>Contains: {ingredientFilter}</InputGroup.Text>
+              <InputGroup.Text className="shownFilter">
+                Contains: {ingredientFilter}
+              </InputGroup.Text>
             )}
           </InputGroup>
         )}
@@ -232,14 +236,15 @@ const Search = ({ setSelectedRecipe }) => {
       {recipesList.length > 0 ? (
         <h2>Displaying {recipesList.length} matching recipes...</h2>
       ) : (
-        <h2 style={{marginTop: 20}}>No recipes match the entered search criteria.</h2>
+        <h2 style={{ marginTop: 20 }}>
+          No recipes match the entered search criteria.
+        </h2>
       )}
-
       <Row className="g-4">
         {recipesList.map((recipe, index) => {
           return (
-            <Col md="4" key={index}>
-              <Card style={{ margin: 20 }}>
+            <Col md="4" key={index} style={{marginBottom: 20, marginTop: 20}}>
+              <Card style={{ backgroundColor: "#ECF5E0", height: "100%" }}>
                 <Card.Img
                   style={{ objectFit: "cover" }}
                   height={200}
@@ -247,18 +252,29 @@ const Search = ({ setSelectedRecipe }) => {
                   src={recipe.imageURL}
                 />
                 <Card.Body>
-                  <Card.Title>{recipe.name}</Card.Title>
-                  <Card.Text>Time: {recipe.hours} hours</Card.Text>
-                  <Card.Text>Complexity: {recipe.complexity}/5</Card.Text>
+                  <Card.Title style={{ fontWeight: "bold" }}>
+                    {recipe.name}
+                  </Card.Title>
+                  <Card.Text>
+                    Time: {recipe.hours} {recipe.hours === 1 ? "hour" : "hours"}
+                  </Card.Text>
+                  <Card.Text>
+                    Complexity: {recipe.complexity} out of 5
+                  </Card.Text>
                   <Card.Text>Servings: {recipe.servings}</Card.Text>
                 </Card.Body>
                 <Button
                   style={{ margin: "0px 20px" }}
+                  className="greenButton"
                   onClick={() => redirectToDetails(recipe)}
                 >
                   View Details
                 </Button>
-                <Button style={{ margin: "10px 20px" }} href={recipe.source}>
+                <Button
+                  style={{ margin: "10px 20px", textDecoration: "none" }}
+                  className="greyButton"
+                  href={recipe.source}
+                >
                   View Original Source
                 </Button>
               </Card>

@@ -12,19 +12,20 @@ const Oven = ({ temperature }) => {
 
   const ovenStyle = {
     margin: "auto",
-    height: "300px",
+    height: "275px",
     width: "600px",
-    borderColor: "black",
-    borderWidth: "5px",
+    borderColor: "#2E3338",
+    borderWidth: "3px",
     borderStyle: "solid",
+    backgroundColor: "#646e79",
   };
 
   const ovenWindowStyle = {
     margin: "20px auto",
     height: "200px",
-    width: "400px",
-    borderColor: "black",
-    borderWidth: "5px",
+    width: "450px",
+    borderColor: "#2E3338",
+    borderWidth: "3px",
     borderStyle: "solid",
     display: "flex",
     justifyContent: "center",

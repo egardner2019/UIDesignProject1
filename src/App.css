@@ -1,9 +1,87 @@
 .App {
   margin: 2% 15%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: #386c0b;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+h2 {
+  color: #98b06f;
+}
+
+a {
+  color: #495159;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #274a07;
 }
 
 /* Placeholder text was too dark, making it look like the user's input. Changed the placeholder text color below. */
 input[type="text"]::-webkit-input-placeholder,
 input[type="number"]::-webkit-input-placeholder {
   color: rgb(178, 179, 180);
+}
+
+.redButton {
+  background-color: #a22522;
+  border-color: #a22522;
+}
+
+.redButton:hover,
+.redButton:focus,
+.redButton:active {
+  background-color: #8d1e25 !important;
+  border-color: #8d1e25 !important;
+}
+
+.redButton:focus,
+.redButton:active {
+  box-shadow: 0 0 0 0.2rem #d63b44 !important;
+}
+
+.greyButton {
+  background-color: #495159;
+  border-color: #495159;
+}
+
+.greyButton:hover,
+.greyButton:focus,
+.greyButton:active {
+  background-color: #2e3439 !important;
+  border-color: #2e3439 !important;
+}
+
+.greyButton:focus,
+.greyButton:active {
+  box-shadow: 0 0 0 0.2rem #646e79 !important;
+}
+
+.greenButton {
+  background-color: #386c0b;
+  border-color: #386c0b;
+}
+
+.greenButton:hover,
+.greenButton:focus,
+.greenButton:active {
+  background-color: #274a07 !important;
+  border-color: #274a07 !important;
+}
+
+.greenButton:focus,
+.greenButton:active {
+  box-shadow: 0 0 0 0.2rem #849e57 !important;
+}
+
+.shownFilter {
+  margin: 10px;
 }
