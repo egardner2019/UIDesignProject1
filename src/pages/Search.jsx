@@ -173,7 +173,7 @@ const Search = ({ setSelectedRecipe }) => {
         </Modal.Footer>
       </Modal>
 
-      <h1 style={{ textAlign: "center" }}>Cooking Companion</h1>
+      <h1 style={{ textAlign: "center", marginTop: 50 }}>Cooking Companion</h1>
       <Form style={{ marginTop: 50 }}>
         <InputGroup className="mb-3">
           <Button

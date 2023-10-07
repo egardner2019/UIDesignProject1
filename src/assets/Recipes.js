@@ -1142,7 +1142,7 @@ const recipes = [
       "2 medium onions, thinly sliced",
       "1 garlic clove, finely chopped",
       "1/4 cup butter",
-      "1 1/2 cups from 1 carton beef broth",
+      "1 1/2 cups beef broth",
       "1/2 teaspoon salt",
       "1 teaspoon worcestershire sauce",
       "1/4 cup all purpose flour",
