@@ -243,16 +243,26 @@ const Search = ({ setSelectedRecipe }) => {
       <Row className="g-4">
         {recipesList.map((recipe, index) => {
           return (
-            <Col md="4" key={index} style={{marginBottom: 20, marginTop: 20}}>
-              <Card style={{ backgroundColor: "#ECF5E0", height: "100%" }}>
+            <Col md="4" key={index} style={{ marginBottom: 20, marginTop: 20 }}>
+              <Card
+                className="shadow"
+                style={{
+                  backgroundColor: "#ECF5E0",
+                  height: "100%",
+                  cursor: "pointer",
+                  borderStyle: "hidden",
+                  borderRadius: 30
+                }}
+                onClick={() => redirectToDetails(recipe)}
+              >
                 <Card.Img
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", borderTopLeftRadius: 30, borderTopRightRadius: 30 }}
                   height={200}
                   variant="top"
                   src={recipe.imageURL}
                 />
                 <Card.Body>
-                  <Card.Title style={{ fontWeight: "bold" }}>
+                  <Card.Title style={{ fontWeight: "bold", color: "#386c0b" }}>
                     {recipe.name}
                   </Card.Title>
                   <Card.Text>
@@ -263,20 +273,6 @@ const Search = ({ setSelectedRecipe }) => {
                   </Card.Text>
                   <Card.Text>Servings: {recipe.servings}</Card.Text>
                 </Card.Body>
-                <Button
-                  style={{ margin: "0px 20px" }}
-                  className="greenButton"
-                  onClick={() => redirectToDetails(recipe)}
-                >
-                  View Details
-                </Button>
-                <Button
-                  style={{ margin: "10px 20px", textDecoration: "none" }}
-                  className="greyButton"
-                  href={recipe.source}
-                >
-                  View Original Source
-                </Button>
               </Card>
             </Col>
           );
