@@ -4,13 +4,6 @@ import Search from "./pages/Search";
 import RecipeDetails from "./pages/RecipeDetails";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-/**
-  TODO
-  - if time: change heat colors?
-  - add remaining details to recipes to Recipes.js
-  - make app accessible from the web (Netlify, GitHub, Vercel)
-**/
-
 function App() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
