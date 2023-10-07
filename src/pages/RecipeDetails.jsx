@@ -128,7 +128,7 @@ const RecipeDetails = ({ recipe }) => {
             })}
           </ol>
         </Col>
-        <div style={{ marginLeft: 50 }}>
+        <div className="my-auto" style={{ marginLeft: 50 }}>
           <Container
             style={{
               marginBottom: 30,

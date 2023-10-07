@@ -98,6 +98,7 @@ const recipes = [
       "9 x 13 baking dish",
       "oven",
       "aluminum foil",
+      "stove",
     ],
   },
   {
@@ -252,6 +253,7 @@ const recipes = [
       "large pot",
       "medium skillet",
       "small skillet",
+      "stove",
     ],
   },
   {
@@ -263,6 +265,10 @@ const recipes = [
     servings: 6,
     source: "https://momsdish.com/chicken-lo-mein",
     ingredients: [
+      "1/3 cup chicken broth",
+      "4 tbsp soy sauce",
+      "2 tbsp brown sugar",
+      "2 tsp sesame oil",
       "8 oz noodles, cooked according to package instructions",
       "1 tbsp oil olive, avocado, or sesame oil",
       "1 lb chicken",
@@ -271,7 +277,29 @@ const recipes = [
       "2 cups broccoli",
       "4 garlic cloves",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Whisk the brown sugar into the chicken broth until it's dissolved. Next, whisk the soy sauce in and set it aside.",
+      },
+      {
+        text: "Slice the carrots, broccoli, and onion into 2-inch pieces. Slice the chicken into similar-sized strips.",
+      },
+      {
+        text: "Preheat a wok with oil and sauté the chicken until it's golden brown. Remove the chicken from the skillet and set it aside.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "In the same wok, sauté the onions in the chicken drippings and a bit more oil until golden brown. Remove the onions from the skillet and set aside. Next, sauté the carrots until softened, add in the broccoli, and sauté for an additional 3 minutes. Press the garlic into the wok.",
+      },
+      {
+        text: "Add the cooked chicken back into the wok with the veggies. Pour the sauce over the ingredients and simmer for about 2 minutes.",
+      },
+      { text: "Add the cooked noodles, toss everything together, and enjoy!" },
+    ],
     nutritionFacts: [
       "295 calories",
       "38g carbohydrates",
@@ -288,7 +316,7 @@ const recipes = [
       "47mg calcium",
       "2mg iron",
     ],
-    equipment: [],
+    equipment: ["wok", "stove"],
   },
   {
     name: "Easy Chicken Noodle Soup",
@@ -300,15 +328,37 @@ const recipes = [
     source: "https://momsdish.com/recipe/56/chicken-noodle-soup",
     ingredients: [
       "3 qts chicken broth",
-      "1 large carrot sliced into bite-size pieces",
-      "1 lb cooked chicken sliced into bite-sized pieces",
-      "3 medium potatoes sliced into bite-sized pieces",
+      "1 large carrot, sliced into bite-size pieces",
+      "1 lb chicken",
+      "3 medium potatoes, sliced into bite-sized pieces",
       "1/2 cup noodles",
       "1 tsp black pepper",
-      "1/2 tbsp salt adjust to taste",
-      "1/2 cup scallions chopped",
+      "1/2 tbsp salt, adjusted to taste",
+      "1/2 cup scallions, chopped",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Boil the chicken in salted water for 10 minutes. Rinse, then slice into bite-sized pieces.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Fill a pot with 3 quarts of chicken broth, bring to a boil. Add sliced carrots and chicken; let it cook for about 10 minutes.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      { text: "Add potatoes and let it simmer for 10 more minutes." },
+      {
+        text: "Add noodles and season with black pepper and salt, to taste. Cook until the noodles are fully cooked. Add scallions and other fresh herbs.",
+      },
+      { text: "Serve while the soup is hot." },
+    ],
     nutritionFacts: [
       "135 calories",
       "6g carbohydrates",
@@ -325,7 +375,7 @@ const recipes = [
       "30mg calcium",
       "1mg iron",
     ],
-    equipment: [],
+    equipment: ["stove", "2 pots"],
   },
   {
     name: "Lemon Chicken Pasta",
@@ -336,19 +386,50 @@ const recipes = [
     servings: 6,
     source: "https://momsdish.com/lemon-chicken-pasta",
     ingredients: [
-      "10 oz pasta any of your favorites",
-      "1 1/2 lbs chicken breast boneless & skinless",
+      "10 oz pasta",
+      "1 1/2 lbs chicken breast, boneless & skinless",
       "3 tbsp olive oil",
       "1 tbsp Italian seasoning",
       "1/2 tbsp salt",
       "1 tsp ground black pepper",
       "4 tbsp unsalted butter",
-      "3 garlic cloves minced",
-      "1/3 cup lemon juice freshly squeezed",
-      "4 tbsp fresh parsley chopped",
-      "1 cup Parmesan cheese freshly grated",
+      "3 garlic cloves, minced",
+      "1/3 cup lemon juice, freshly squeezed",
+      "4 tbsp fresh parsley, chopped",
+      "1 cup Parmesan cheese, freshly grated",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Cook pasta al dente according to package instructions. Set a cup of pasta water aside and drain the remainder.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Preheat a deep frying pan with oil. Season chicken with Italian seasoning, salt, and pepper.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "Brown chicken on all sides until golden brown and internal temperature reaches 165°F. Remove and set it aside. Slice into bite size pieces.",
+      },
+      {
+        text: "To the same frying pan, reduce heat, add in butter and minced garlic. Cook it for about 30 seconds until fragrant.",
+        button: {
+          text: "Turn down front-left burner",
+          value: Temperatures.MediumLow,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "Add cooked pasta, sliced chicken, lemon juice, fresh parsley, and parmesan to pan and toss everything together. Enjoy!",
+      },
+    ],
     nutritionFacts: [
       "508 calories",
       "38g carbohydrates",
@@ -365,7 +446,7 @@ const recipes = [
       "238mg calcium",
       "2mg iron",
     ],
-    equipment: [],
+    equipment: ["pot", "deep frying pan", "meat thermometer", "stove"],
   },
   {
     name: "Steak Quesadilla",
@@ -379,12 +460,38 @@ const recipes = [
       "6 flour tortillas",
       "2 cups Mexican cheese",
       "1 tbsp oil olive or avocado",
-      "1/2 large bell pepper diced",
-      "1/2 medium onion diced",
+      "1/2 large bell pepper, diced",
+      "1/2 medium onion, diced",
       "1 lb steak cooked, cut into cubes",
       "2 tbsp unsalted butter",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Preheat a skillet with oil over medium heat. Add in the diced bell pepper and onion and sauté them for another 5 minutes or until veggies soften.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Add the sliced, precooked steak to the veggies and toss until golden. Set the steak and veggie mixture aside.",
+      },
+      {
+        text: "Into a clean skillet, add a bit of butter and place a tortilla on top. On half of the tortilla, add the cheese, steak mixture, and more cheese. Fold the tortilla over.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "Once the tortilla is golden, flip it over and cook for a few more minutes until the other side is also golden. Repeat the same steps with the rest of quesadillas.",
+      },
+      {
+        text: "Serve while the quesadillas are still warm and the cheese is melty. Enjoy!",
+      },
+    ],
     nutritionFacts: [
       "443 calories",
       "17g carbohydrates",
@@ -401,11 +508,11 @@ const recipes = [
       "299mg calcium",
       "3mg iron",
     ],
-    equipment: [],
+    equipment: ["2 skillets", "stove"],
   },
   {
     name: "Carne Asada Street Tacos",
-    hours: 1,
+    hours: 7,
     imageURL:
       "https://i1.wp.com/cdn.momsdish.com/wp-content/uploads/2020/04/Carne-Asada-Street-Tacos-15-1200x1800.jpg",
     complexity: 3.5,
@@ -414,18 +521,40 @@ const recipes = [
     ingredients: [
       "2 lb beef Flank or Skirt Steak",
       "1 cup soy sauce",
-      "1 cup cilantro chopped",
+      "1 cup cilantro, chopped",
       "1 medium orange",
       "2 small limes",
       "4 green onions",
-      "2 avocados mashed",
+      "2 avocados, mashed",
       "1/2 cup cotija cheese",
-      "1 large onion finely diced",
-      "1/2 cup fresh cilantro chopped",
+      "1 large onion, finely diced",
+      "1/2 cup fresh cilantro, chopped",
       "8 corn tortillas",
       "2 limes garnish",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Place the Flank Steak in a large plastic storage bag. Add soy sauce, orange slices and lime juice. Chop green onions and cilantro and add them into the bag. Rub the seasoning all over the beef. Seal the bag and let it marinate for at least 6 hours.",
+      },
+      {
+        text: "Remove the meat from the marinade. Pat dry with a paper towel. Remove all excess herbs from the carne asada. Grill the carne asada on the grill pan until the internal temperature reaches medium-rare at 145 °F.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.MediumHigh,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Let it rest for 10 minutes. Slice it against the grain and cut it into bite-sized strips.",
+      },
+      {
+        text: "Spoon mashed avocado onto a tortilla. Top it off with a couple of strips of carne asada.",
+      },
+      {
+        text: "Sprinkle with cilantro and onion. Sprinkle with cotija cheese. Right before serving, squeeze some lime juice over the top.",
+      },
+      { text: "Serve with your favorite salsa." },
+    ],
     nutritionFacts: [
       "360 calories",
       "25g carbohydrates",
@@ -442,37 +571,7 @@ const recipes = [
       "129mg calcium",
       "3mg iron",
     ],
-    equipment: [],
-  },
-  {
-    name: "Teriyaki Chicken Skewers",
-    hours: 0.5,
-    imageURL:
-      "https://i1.wp.com/cdn.momsdish.com/wp-content/uploads/2023/05/Teriyaki-Chicken-Skewers-010-1200x1800.jpg",
-    complexity: 1.5,
-    servings: 6,
-    source: "https://momsdish.com/teriyaki-chicken-skewers",
-    ingredients: [
-      "3 lbs chicken thighs boneless, skinless",
-      "1.5 cups Teriyaki sauce",
-    ],
-    instructions: [],
-    nutritionFacts: [
-      "561 calories",
-      "12g carbohydrates",
-      "41g protein",
-      "38g fat",
-      "10g saturated fat",
-      "222mg cholesterol",
-      "2932mg sodium",
-      "627mg potassium",
-      ".1g fiber",
-      "10g sugar",
-      "177IU vitamin A",
-      "36mg calcium",
-      "3mg iron",
-    ],
-    equipment: [],
+    equipment: ["refrigerator", "grill pan", "stove"],
   },
   {
     name: "Chicken Stir Fry",
@@ -495,7 +594,39 @@ const recipes = [
       "1 tbsp corn starch",
       "1 tbsp fresh ginger",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "In a small bowl, whisk together the soy sauce, brown sugar, sesame oil, and ginger to create the stir fry sauce. Set aside.",
+      },
+      {
+        text: "Cut the bell pepper into strips and the broccoli into bite-sized pieces. Slice the onion into half rings and chop the green onion. Cut the chicken thighs into bite-sized pieces.",
+      },
+      {
+        text: "Preheat a wok or a large deep-frying pan over medium-high heat. Add the oil to the hot wok, then add the chopped peppers, onions, and broccoli. Save the green onion for later. Sauté, stirring constantly, until the veggies are golden brown. Transfer them to a plate and set aside.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.MediumHigh,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Increase the heat to high. In the same wok or pan, add the chicken and cook until it turns golden brown.",
+        button: {
+          text: "Turn up back-right burner",
+          value: Temperatures.High,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Add the cooked veggies and the green onions to the pan. Pour the sauce in, give everything a good toss, and cook on low for 2-4 minutes, or until the sauce slightly thickens.",
+        button: {
+          text: "Turn down back-right burner",
+          value: Temperatures.Low,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      { text: "Serve the stir fry with your favorite sides and enjoy!" },
+    ],
     nutritionFacts: [
       "496 calories",
       "13g carbohydrates",
@@ -512,7 +643,7 @@ const recipes = [
       "45mg calcium",
       "2mg iron",
     ],
-    equipment: [],
+    equipment: ["small bowl", "stove", "wok"],
   },
   {
     name: "The Classic Pierogi",
@@ -525,17 +656,53 @@ const recipes = [
     ingredients: [
       "2 eggs",
       "2 tbsp sour cream",
-      "1 cup milk",
+      "1 1/4 cup milk (1 cup for dough, 1/4 cup warm for filling",
       "3 1/2 cup flour (may need more or less)",
       "2 tsp salt",
       "3 lb large potatoes",
-      "4 tbsp unsalted Butter",
-      "1/4 cup warm milk",
+      "6 tbsp unsalted butter (4 tbsp for filling, 2 tbsp for serving)",
       "1/2 cup cheddar cheese",
       "1 large onion",
-      "2 tbsp Unsalted Butter",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Cook potatoes in a pot with salty water until you can easily pierce them with a fork. Drain water from cooked potatoes. Mash them with some warm milk and butter. Mix in cheese.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Whisk eggs with sour cream and milk until you get an even texture. Add in flour and salt.",
+      },
+      {
+        text: "Knead the dough by hand or by using a standing mixer. Allow dough to rest for 10 minutes once fully kneaded and elastic.",
+      },
+      {
+        text: "Roll out the dough on a well floured surface. Cut circles out of the dough using a cookie cutter or a floured glass cup.",
+      },
+      {
+        text: "One by one, spoon filling into dough dough. Fold the dough over to create a quesadilla or empanada shape. Pinch edges together with your fingers to seal the filling inside.",
+      },
+      { text: "Flour the surface where you plan to place pierogi." },
+      {
+        text: "Bring 3 quarts of water to a boil. One by one, add pierogi into the boiling water. Once they float to the top (10-15 minutes into the cooking), they are fully cooked.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "In a buttered pan, sauté onion to a golden brown. Add pierogi to pan. Fry sides of pierogi to a golden brown.",
+        button: {
+          text: "Turn on front-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontRightBurner,
+        },
+      },
+    ],
     nutritionFacts: [
       "189 calories",
       "24g carbohydrates",
@@ -552,7 +719,13 @@ const recipes = [
       "69mg calcium",
       "2mg iron",
     ],
-    equipment: [],
+    equipment: [
+      "stove",
+      "2 pots",
+      "mixer",
+      "cookie cutter or glass cup",
+      "pan",
+    ],
   },
   {
     name: "Beet Quinoa Salad",
@@ -563,13 +736,28 @@ const recipes = [
     servings: 4,
     source: "https://momsdish.com/recipe/366/beet-quinoa-salad",
     ingredients: [
-      "1 cup cooked quinoa",
-      "2 medium beets cooked",
+      "1 cup quinoa",
+      "2 medium beets, cooked",
       "3 medium mandarins",
       "1/2 cup goat cheese (feta is another great option)",
-      "2 tbsp Italian parsley for garnish",
+      "2 tbsp Italian parsley, for garnish",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Combine the quinoa and 1 3/4 cup water in a medium pot. Bring to a boil, cover, and reduce heat. Simmer for 15 minutes. Remove the pot from heat and let it sit, covered, for 10 minutes.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Clean and dice beets and mandarins into small cubes. Add quinoa, cheese and herbs to diced ingredients.",
+      },
+      {
+        text: "To serve, toss all the ingredients together. Garnish with herbs and serve.",
+      },
+    ],
     nutritionFacts: [
       "184 calories",
       "23g carbohydrates",
@@ -586,18 +774,59 @@ const recipes = [
       "81mg calcium",
       "2mg iron",
     ],
-    equipment: [],
+    equipment: ["medium pot", "large bowl", "stove"],
   },
   {
     name: "Best Homemade Pizza",
     hours: 1,
     imageURL:
       "https://thefoodcharlatan.com/wp-content/uploads/2021/08/Homemade-Pizza-Recipe-1-Hour-or-Overnight-20-650x975.jpg",
-    complexity: 3.5,
+    complexity: 4.5,
     servings: 4,
     source: "https://thefoodcharlatan.com/homemade-pizza-recipe/",
-    ingredients: ["", ""],
-    instructions: [],
+    ingredients: [
+      "1 16-ounce ball of pizza dough",
+      "1 tablespoon olive oil, for rubbing dough",
+      "1 cup pizza sauce",
+      "3 ounces mozzarella cheese, thinly sliced",
+      "1 1/4 cups mozzarella cheese, shredded",
+      "2.5 ounces pepperoni",
+      "2 tablespoons parmesan cheese, shredded",
+    ],
+    instructions: [
+      {
+        text: "Place a pizza stone/rimmed baking sheet/pizza pan in the bottom third of your oven.",
+      },
+      {
+        text: "Preheat your oven to 550°F. Let the stone/sheet/pan preheat for at least 30 minutes.",
+        button: {
+          text: "Preheat oven",
+          value: 550,
+          location: OvenBurnerLocations.Oven,
+        },
+      },
+      {
+        text: "Prepare a work surface by rubbing the counter with oil.",
+      },
+      {
+        text: "Place your ball of pizza dough in the center of your prepared work surface and use your hands to press it down, starting from the center. Keep gently patting out the dough, moving the dough outward from the center. Continue patting and stretching the dough gently with your hands until it is about 12 inches across.",
+      },
+      {
+        text: "Transfer the dough to a square of parchment paper. Drizzle about a tablespoon of olive oil over the top of your dough. Use your hands or a pastry brush to rub the oil all over the top of the dough, especially the edges of the crust.",
+      },
+      {
+        text: "Once the oven is up to temperature, slide your pizza dough onto your pizza peel/flat baking sheet. Open the oven and slide the pizza dough and the parchment paper onto the hot hot pizza stone (or pizza pan). Shut the oven door and par bake for 1-2 minutes, until the dough is slightly puffed. Set a timer, don't walk away! Transfer the half-baked dough back onto your pizza peel. Keep the oven door shut as much as possible so you don't lose heat. Poke down any large bubbles on your crust.",
+      },
+      {
+        text: "Leave the crust on the peel while you add your toppings. Add pizza sauce (spread it around with a ladle). Add thinly sliced mozzarella, and then top with shredded mozzarella. Add pepperoni. Sprinkle parmesan cheese over your toppings.",
+      },
+      {
+        text: "Transfer the pizza back onto the pizza stone/pan, this time without the parchment paper. You want the pizza to do its final bake directly on the stone. Bake the pizza for about 8-12 minutes.",
+      },
+      {
+        text: "Remove your pizza from the oven using the pizza peel. Slide it directly onto a cooling rack. Let cool a couple minutes, then transfer to a cutting board. Slice into 8 pieces and devour!",
+      },
+    ],
     nutritionFacts: [
       "377 calories",
       "28g carbohydrates",
@@ -614,7 +843,15 @@ const recipes = [
       "526mg calcium",
       "2.2mg iron",
     ],
-    equipment: [],
+    equipment: [
+      "pizza stone or rimmed baking sheet or pizza pan",
+      "parchment paper",
+      "pizza peel or flat baking sheet",
+      "oven",
+      "pastry brush (optional)",
+      "ladle",
+      "cooling rack",
+    ],
   },
   {
     name: "Baked Ziti",
@@ -630,11 +867,42 @@ const recipes = [
       "1 pound lean ground beef",
       "2 (26 ounce) jars spaghetti sauce",
       "6 ounces provolone cheese, sliced",
-      "1 ½ cups sour cream",
+      "1 1/2 cups sour cream",
       "6 ounces mozzarella cheese, shredded",
-      "2 tablespoons grated Parmesan cheese",
+      "2 tablespoons parmesan cheese, grated",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Bring a large pot of lightly salted water to a boil. Add ziti pasta, and cook until al dente, about 8 minutes; drain.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Meanwhile, brown ground beef and onion in a large skillet over medium heat; stir in spaghetti sauce and simmer for 15 minutes.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "Preheat the oven to 350°F. Butter a 9x13-inch baking dish.",
+        button: {
+          text: "Preheat oven",
+          value: 350,
+          location: OvenBurnerLocations.Oven,
+        },
+      },
+      {
+        text: "Spread half of the ziti in the bottom of the prepared dish; top with provolone cheese, sour cream, 1/2 of the meat sauce, remaining ziti, mozzarella cheese, and remaining meat sauce. Top with grated Parmesan cheese.",
+      },
+      {
+        text: "Bake in the preheated oven until heated through and cheeses have melted, about 30 minutes.",
+      },
+    ],
     nutritionFacts: [
       "578 calories",
       "58g carbohydrates",
@@ -651,7 +919,13 @@ const recipes = [
       "359mg calcium",
       "4mg iron",
     ],
-    equipment: [],
+    equipment: [
+      "large pot",
+      "oven",
+      "stove",
+      "large skillet",
+      "9x13-inch baking dish",
+    ],
   },
   {
     name: "Bow Ties with Sausage, Tomatoes, and Cream",
@@ -674,7 +948,31 @@ const recipes = [
       "½ teaspoon salt",
       "3 tablespoons minced fresh parsley",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Bring a large pot of lightly salted water to a boil. Cook pasta in boiling water until al dente, 8 to 10 minutes; drain.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Heat oil in a large, deep skillet over medium heat. Cook sausage and pepper flakes until sausage is evenly brown.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      { text: "Stir in onion and garlic, and cook until onion is tender." },
+      {
+        text: "Stir in tomatoes, cream, and salt. Simmer until mixture thickens, 8 to 10 minutes.",
+      },
+      {
+        text: "Stir cooked pasta into sauce and heat through. Sprinkle with parsley. Enjoy!",
+      },
+    ],
     nutritionFacts: [
       "656 calories",
       "51g carbohydrates",
@@ -690,11 +988,11 @@ const recipes = [
       "91mg calcium",
       "3mg iron",
     ],
-    equipment: [],
+    equipment: ["stove", "large, deep skillet", "large pot"],
   },
   {
     name: "Meatloaf",
-    hours: 1,
+    hours: 1.25,
     imageURL:
       "https://natashaskitchen.com/wp-content/uploads/2019/02/Meatloaf-Recipe.jpg",
     complexity: 3,
@@ -705,23 +1003,41 @@ const recipes = [
       "1 med onion, finely chopped",
       "2 large eggs",
       "3 garlic cloves, minced",
-      "3 Tbsp ketchup",
+      "3 Tbsp ketchup (for meatloaf)",
+      "3/4 cup ketchup (for sauce)",
       "3 Tbsp fresh parsley, finely chopped",
       "3/4 cup Panko breadcrumbs",
       "1/3 cup milk",
-      "1 ½ tsp salt, or to taste",
-      "1 ½ tsp Italian seasoning",
-      "¼ tsp ground black pepper",
-      "½ tsp ground paprika",
-      "3/4 cup ketchup",
+      "1 1/2 tsp salt, or to taste (for meatloaf)",
+      "1/4 tsp salt (for sauce)",
+      "1/4 tsp ground black pepper (for meatloaf)",
+      "1/4 tsp ground black pepper (for sauce)",
+      "1 1/2 tsp Italian seasoning",
+      "1/2 tsp ground paprika",
       "1 ½ tsp white vinegar",
-      "2 ½ Tbsp brown sugar",
+      "2 1/2 Tbsp brown sugar",
       "1 tsp garlic powder",
-      "½ tsp onion powder",
-      "¼ tsp ground black pepper",
-      "¼ tsp salt",
+      "1/2 tsp onion powder",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Line a 9x5-inch loaf pan with parchment paper and preheat oven to 375°F.",
+        button: {
+          text: "Preheat the oven",
+          value: 375,
+          location: OvenBurnerLocations.Oven,
+        },
+      },
+      {
+        text: "In a large bowl, add all of the ingredients for the meatloaf (ground beef, onion, eggs, garlic cloves, ketchup, parsley, breadcrumbs, milk, salt, seasoning, black pepper, paprika). Mix well to combine.",
+      },
+      {
+        text: "Add meat to the loaf pan, gently press meat down and shape evenly and bake meatloaf for 40 minutes.",
+      },
+      {
+        text: "In a small bowl, mix all of the ingredients together for the sauce (ketchup, white vinegar, brown sugar, garlic powder, onion powder, black pepper, salt). Spread the sauce over meatloaf then return to oven and bake additional 15-20 minutes or until the internal temperature is 160˚F. Rest meatloaf 10 minutes before slicing. Drizzle with baking juices from the pan.",
+      },
+    ],
     nutritionFacts: [
       "344 calories",
       "18g carbohydrates",
@@ -737,7 +1053,7 @@ const recipes = [
       "65mg calcium",
       "3.3mg iron",
     ],
-    equipment: [],
+    equipment: ["oven", "large bowl", "small bowl", "9x5-inch loaf pan"],
   },
   {
     name: "Spaghetti with Meat Sauce",
@@ -751,19 +1067,53 @@ const recipes = [
     ingredients: [
       "1 pound lean ground meat like beef, turkey, chicken or lamb",
       "3 tablespoons olive oil",
-      "1 cup (130 grams) chopped onion",
-      "3 garlic cloves, minced (1 tablespoon)",
+      "1 cup chopped onion",
+      "3 garlic cloves, minced",
       "2 tablespoons tomato paste",
       "1/2 teaspoon dried oregano",
-      "Pinch crushed red pepper flakes",
+      "pinch crushed red pepper flakes",
       "1 cup water, broth or dry red wine",
       "1 (28-ounce) can crushed tomatoes",
-      "Salt and fresh ground black pepper",
-      "Handful fresh basil leaves, plus more for serving",
+      "salt and fresh ground black pepper",
+      "handful fresh basil leaves, plus more for serving",
       "12 ounces dried spaghetti or favorite pasta shape",
       "1/2 cup shredded parmesan cheese",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Heat the oil in a large pot over medium-high heat. Add the meat and cook until browned, about 8 minutes. As the meat cooks, use a wooden spoon to break it up into smaller crumbles.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.MediumHigh,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Add the onions and cook, stirring every once and a while, until softened, about 5 minutes.",
+      },
+      {
+        text: "Stir in the garlic, tomato paste, oregano, and red pepper flakes and cook, stirring continuously for about 1 minute.",
+      },
+      {
+        text: "Pour in the water and use a wooden spoon to scrape up any bits of meat or onion stuck to the bottom of the pot. Stir in the tomatoes, 3/4 teaspoon of salt, and a generous pinch of black pepper. Bring the sauce to a low simmer. Cook, uncovered, at a low simmer for 25 minutes. As it cooks, stir the sauce a few times.",
+        button: {
+          text: "Turn down back-right burner",
+          value: Temperatures.Low,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "About 15 minutes before the sauce finishes cooking, bring a large pot of salted water to the boil, and then cook pasta according to package directions.",
+        button: {
+          text: "Turn on front-left burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.FrontLeftBurner,
+        },
+      },
+      {
+        text: "Take the sauce off of the heat, and then stir in the basil. Toss in the cooked pasta, and then leave for a minute so that the pasta absorbs some of the sauce. Toss again, and then serve with parmesan sprinkled on top.",
+      },
+    ],
     nutritionFacts: [
       "486 calories",
       "58.2g carbohydrates",
@@ -775,7 +1125,7 @@ const recipes = [
       "4.7g fiber",
       "10.3g sugar",
     ],
-    equipment: [],
+    equipment: ["2 large pots", "stove"],
   },
   {
     name: "Classic Beef Stroganoff",
@@ -787,19 +1137,45 @@ const recipes = [
     source:
       "https://www.bettycrocker.com/recipes/classic-beef-stroganoff/c17a904f-a8f6-48ae-bedb-5b301a8ea317",
     ingredients: [
-      "1 ½ pounds beef sirloin steak, 1/2 inch thick",
+      "1 1/2 pounds beef sirloin steak, 1/2 inch thick",
       "8 ounces fresh mushrooms, sliced (2 1/2 cups)",
       "2 medium onions, thinly sliced",
       "1 garlic clove, finely chopped",
-      "¼ cup butter",
-      "1 ½ cups from 1 carton Progresso™ Classic Beef Broth",
-      "½ teaspoon salt",
-      "1 teaspoon Worcestershire sauce",
-      "¼ cup Gold Medal™ All Purpose Flour",
-      "1 ½ cups sour cream",
+      "1/4 cup butter",
+      "1 1/2 cups from 1 carton beef broth",
+      "1/2 teaspoon salt",
+      "1 teaspoon worcestershire sauce",
+      "1/4 cup all purpose flour",
+      "1 1/2 cups sour cream",
       "3 cups hot cooked egg noodles",
     ],
-    instructions: [],
+    instructions: [
+      { text: "Cut beef across grain into about 1 1/2x1/2-inch strips." },
+      {
+        text: "Cook mushrooms, onions and garlic in butter in 10-inch skillet over medium heat, stirring occasionally, until onions are tender; remove from skillet.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Cook beef in same skillet until brown. Stir in 1 cup of the broth, the salt and worcestershire sauce. Heat to boiling; reduce heat. Cover and simmer 15 minutes.",
+        button: {
+          text: "Turn down back-right burner",
+          value: Temperatures.Low,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Stir remaining 1/2 cup broth into flour; stir into beef mixture. Add onion mixture; heat to boiling, stirring constantly. Boil and stir 1 minute. Stir in sour cream; heat until hot (do not boil). Serve over noodles.",
+        button: {
+          text: "Turn up back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+    ],
     nutritionFacts: [
       "435 calories",
       "31g carbohydrates",
@@ -811,7 +1187,7 @@ const recipes = [
       "560mg potassium",
       "2g fiber",
     ],
-    equipment: [],
+    equipment: ["10-inch skillet", "stove"],
   },
   {
     name: "Grilled Cheese",
@@ -822,13 +1198,31 @@ const recipes = [
     servings: 1,
     source: "https://www.bonappetit.com/recipe/best-ever-grilled-cheese",
     ingredients: [
-      "2 slices half-inch-thick Pullman or other white bread",
+      "2 slices half-inch-thick white bread",
       "2 tablespoons mayonnaise",
       "1 tablespoon unsalted butter",
-      "2 ounces thinly sliced American cheese or cheddar (about 4 slices)",
-      "Freshly ground black pepper",
+      "2 ounces thinly sliced American or cheddar cheese (about 4 slices)",
+      "freshly ground black pepper",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Place bread on a cutting board and spread mayonnaise over top side of each.",
+      },
+      {
+        text: "Heat a small skillet over medium. Slide in half of butter. When it melts, place 1 slice of bread, mayonnaise side down, in skillet; top with cheese; season with pepper. Top with second slice of bread, mayonnaise side up.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "When underside is golden brown, about 4 minutes, turn sandwich and add remaining butter to skillet. Press down on sandwich to encourage even browning and to help melt cheese.",
+      },
+      {
+        text: "Cook until second side is golden brown and cheese is melted. Eat immediately.",
+      },
+    ],
     nutritionFacts: [
       "810 calories",
       "63g carbohydrates",
@@ -840,7 +1234,7 @@ const recipes = [
       "3g fiber",
       "11g sugar",
     ],
-    equipment: [],
+    equipment: ["cutting board", "stove", "small skillet"],
   },
   {
     name: "Chicken Pot Pie",
@@ -852,18 +1246,41 @@ const recipes = [
     source:
       "https://www.pillsbury.com/recipes/classic-chicken-pot-pie/1401d418-ac0b-4b50-ad09-c6f1243fb992",
     ingredients: [
-      "1 box (14.1 oz) refrigerated Pillsbury™ Pie Crusts (2 Count), softened as directed on box",
+      "1 box (14.1 oz) refrigerated pie crusts (2 count), softened as directed on box",
       "⅓ cup butter or margarine",
-      "⅓ cup chopped onion",
+      "⅓ cup onion, chopped",
       "⅓ cup all-purpose flour",
-      "½ teaspoon salt",
-      "¼ teaspoon pepper",
-      "1 ¾ cups from 1 carton (32 oz) Progresso™ Classic Chicken Broth",
-      "½ cup milk",
-      "2 ½ cups shredded cooked chicken or turkey",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon pepper",
+      "1 3/4 cups from 1 carton (32 oz) chicken broth",
+      "1/2 cup milk",
+      "2 1/2 cups chicken or turkey, cooked and shredded",
       "2 cups frozen mixed vegetables, thawed",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Heat oven to 425°F. Prepare pie crusts as directed on box for two-crust pie using 9-inch glass pie pan.",
+        button: {
+          text: "Preheat oven",
+          value: 425,
+          location: OvenBurnerLocations.Oven,
+        },
+      },
+      {
+        text: "In 2-quart saucepan, melt butter over medium heat. Add onion; cook 2 minutes, stirring frequently, until tender. Stir in flour, salt and pepper until well blended. Gradually stir in broth and milk, cooking and stirring until bubbly and thickened.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Stir in chicken and mixed vegetables. Remove from heat. Spoon chicken mixture into crust-lined pan. Top with second crust; seal edge and flute. Cut slits in several places in top crust.",
+      },
+      {
+        text: "Bake 30 to 40 minutes or until crust is golden brown. During last 15 to 20 minutes of baking, cover crust edge with strips of foil to prevent excessive browning. Let stand 5 minutes before serving.",
+      },
+    ],
     nutritionFacts: [
       "560 calories",
       "44g carbohydrates",
@@ -876,7 +1293,7 @@ const recipes = [
       "4g fiber",
       "4g sugar",
     ],
-    equipment: [],
+    equipment: ["oven", "stove", "9-inch glass pie pan", "2-quart saucepan"],
   },
   {
     name: "Dorito Casserole",
@@ -888,20 +1305,53 @@ const recipes = [
     source: "https://www.allrecipes.com/dorito-casserole-recipe-7565354",
     ingredients: [
       "1 pound lean ground beef",
-      "1 cup chopped yellow onion",
-      "1 cup chopped red bell pepper",
+      "1 cup yellow onion, chopped",
+      "1 cup red bell pepper, chopped",
       "1 (1-ounce) packet taco seasoning",
       "1/2 cup water",
-      "1 (14.5-ounce) can diced tomatoes and green chiles (such as RO*TEL®), drained",
+      "1 (14.5-ounce) can diced tomatoes and green chiles, drained",
       "1 (15-ounce) can black beans, drained and rinsed",
       "1 cup sour cream, plus more for serving",
       "1 (9 1/4-ounce) bag nacho cheese or cool ranch Doritos®, lightly crushed (about 5 cups)",
-      "3 cups shredded Cheddar-Jack cheese",
-      "1 tomato, chopped, or to taste",
-      "2 tablespoons chopped fresh cilantro, or to taste",
-      "1/2 cup salsa, or to taste",
+      "3 cups cheddar-jack cheese, shredded",
+      "1 tomato, chopped",
+      "2 tablespoons fresh cilantro, chopped",
+      "1/2 cup salsa,",
     ],
-    instructions: [],
+    instructions: [
+      {
+        text: "Preheat oven to 350°F. Lightly grease a 3-quart baking dish with nonstick spray.",
+        button: {
+          text: "Preheat oven",
+          value: 425,
+          location: OvenBurnerLocations.Oven,
+        },
+      },
+      {
+        text: "Cook ground beef in a very large skillet over medium heat until browned; drain any excess grease.",
+        button: {
+          text: "Turn on back-right burner",
+          value: Temperatures.Medium,
+          location: OvenBurnerLocations.BackRightBurner,
+        },
+      },
+      {
+        text: "Add onion and pepper and continue cooking until tender, about 5 minutes.",
+      },
+      {
+        text: "Add taco seasoning and water. Simmer mixture until thickened, about 5 minutes.",
+      },
+      { text: "Stir in diced tomatoes, sour cream, and black beans." },
+      {
+        text: "Sprinkle 1 1/2 cups crushed chips in the bottom of the prepared dish.",
+      },
+      { text: "Evenly spoon about half of the meat mixture over the chips." },
+      { text: "Top with 1 1/2 cups crushed chips and 1 1/2 cups cheese." },
+      { text: "Repeat with remaining meat, chips, and cheese." },
+      {
+        text: "Bake in the preheated oven until melted and bubbly, about 25 minutes. Top with diced tomato, green onion, and cilantro and serve with salsa and additional sour cream.",
+      },
+    ],
     nutritionFacts: [
       "653 calories",
       "47g carbohydrates",
@@ -917,7 +1367,13 @@ const recipes = [
       "429mg calcium",
       "4mg iron",
     ],
-    equipment: [],
+    equipment: [
+      "oven",
+      "non-stick spray",
+      "3-quart baking dish",
+      "stove",
+      "large skillet",
+    ],
   },
 ];
 
