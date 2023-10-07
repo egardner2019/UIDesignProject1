@@ -1,6 +1,7 @@
 # Cooking Companion
 This is my smart cookbook implementation for the CS6067 (User Interface Design) course at the University of Cincinnati.
 More information about this project is available at https://sites.google.com/view/egardner2019/university-of-cincinnati/cs6067-user-interface-design.
+Additionally, the code for this project is deployed at https://cookingcompanion.netlify.app/.
 
 This project was created with Vite and React.
 
