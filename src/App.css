@@ -31,6 +31,13 @@ input[type="number"]::-webkit-input-placeholder {
   color: rgb(178, 179, 180);
 }
 
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="number"]:active,
+input[type="number"]:focus {
+  box-shadow: 0 0 5px 0.2rem #98b06f !important;
+}
+
 .redButton {
   background-color: #a22522;
   border-color: #a22522;
@@ -45,7 +52,7 @@ input[type="number"]::-webkit-input-placeholder {
 
 .redButton:focus,
 .redButton:active {
-  box-shadow: 0 0 0 0.2rem #d63b44 !important;
+  box-shadow: 0 0 5px 0.2rem #d63b44 !important;
 }
 
 .greyButton {
@@ -62,7 +69,7 @@ input[type="number"]::-webkit-input-placeholder {
 
 .greyButton:focus,
 .greyButton:active {
-  box-shadow: 0 0 0 0.2rem #646e79 !important;
+  box-shadow: 0 0 5px 0.2rem #646e79 !important;
 }
 
 .greenButton {
@@ -79,7 +86,7 @@ input[type="number"]::-webkit-input-placeholder {
 
 .greenButton:focus,
 .greenButton:active {
-  box-shadow: 0 0 0 0.2rem #849e57 !important;
+  box-shadow: 0 0 5px 0.2rem #849e57 !important;
 }
 
 .shownFilter {
