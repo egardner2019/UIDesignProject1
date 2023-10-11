@@ -3,7 +3,7 @@ This is my smart cookbook implementation for the CS6067 (User Interface Design) 
 More information about this project is available at https://sites.google.com/view/egardner2019/university-of-cincinnati/cs6067-user-interface-design.
 Additionally, the code for this project is deployed at https://cookingcompanion.netlify.app/.
 
-This project was created with Vite and React.
+This project was created with Vite and React. Additional dependencies include react-bootstrap and react-router-dom.
 
 Complete the following steps to run the code in this repository.
 <ul>
