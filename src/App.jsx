@@ -27,7 +27,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
-      <p style={{ textAlign: "center", marginTop: 20, color: "DimGray" }}>An application by <a href="https://sites.google.com/view/egardner2019">Emma Gardner</a>.</p>
+      <p style={{ textAlign: "center", marginTop: 20, color: "DimGray" }}>An application by <a style={{ fontSize: "medium" }} href="https://sites.google.com/view/egardner2019">Emma Gardner</a>.</p>
     </div>
   );
 }
